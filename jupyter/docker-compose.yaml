@@ -8,4 +8,5 @@ services:
             - "8888:8888"
         volumes:
             - "./data:/data:rw"
-        
+        environment:
+            JUPYTER_ENABLE_LAB: "true"

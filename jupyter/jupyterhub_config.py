@@ -53,7 +53,9 @@
 #c.JupyterHub.pid_file = ''
 #c.JupyterHub.port = 8000
 #c.JupyterHub.proxy_api_ip = ''
+c.JupyterHub.proxy_api_ip = '127.0.0.1'
 #c.JupyterHub.proxy_api_port = 0
+c.JupyterHub.proxy_api_port = 8888
 #c.JupyterHub.proxy_auth_token = ''
 #c.JupyterHub.proxy_check_interval = 30
 #              e.g. `c.JupyterHub.proxy_class = 'traefik'`
@@ -90,7 +92,7 @@
 #c.Spawner.cpu_guarantee = None
 #c.Spawner.cpu_limit = None
 #c.Spawner.debug = False
-#c.Spawner.default_url = ''
+c.Spawner.default_url = 'lab'
 #c.Spawner.disable_user_config = False
 #c.Spawner.env_keep = ['PATH', 'PYTHONPATH', 'CONDA_ROOT', 'CONDA_DEFAULT_ENV', 'VIRTUAL_ENV', 'LANG', 'LC_ALL']
 #c.Spawner.environment = {}
@@ -122,3 +124,9 @@
 #c.Authenticator.whitelist = set()
 #c.CryptKeeper.keys = []
 #c.CryptKeeper.n_threads = 2
+
+# for outhenticator
+from oauthenticator.github import GitHubOAuthenticator
+c.JupyterHub.authenticator_class = GitHubOAuthenticator
+print("load file")
+c.Authenticator.auto_login = True
