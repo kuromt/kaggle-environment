@@ -1,0 +1,8 @@
+version: "3"
+services:
+    kedro:
+        build:
+            context: .
+        image: kedro
+        volumes:
+            - "./data:/data:rw"

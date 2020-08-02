@@ -1,0 +1,3 @@
+kaggle
+sweetviz
+kedro[all]
