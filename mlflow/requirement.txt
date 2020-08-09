@@ -1,0 +1,2 @@
+mlflow==1.10.0
+mysqlclient==2.0.1

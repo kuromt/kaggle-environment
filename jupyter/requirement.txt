@@ -1,2 +1,5 @@
 kaggle
 sweetviz
+kedro
+seaborn==0.10.1
+mlflow
